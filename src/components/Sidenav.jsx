@@ -35,7 +35,10 @@ export default function Sidenav() {
         base: "full",
         lg: "16rem",
       }}
-      h="100%"
+      h={{
+        base: "100%",
+        lg: "100vh",
+      }}
     >
       <Box>
         <Image

@@ -25,7 +25,7 @@ export default function Sidenav() {
     },
   ];
   return (
-    <Stack justify="space-between" boxShadow="lg" maxW="16rem" h="100vh">
+    <Stack justify="space-between" boxShadow="lg" w="16rem" h="100vh">
       <Box>
         <Image
           mt="6"
@@ -36,7 +36,7 @@ export default function Sidenav() {
           boxSize="50px"
         />
         <Heading align="center" fontSize="20px" as="h1" pt="1rem">
-          Mohit <br></br> Crypto DashBoard
+          Mohit <br></br> Crypto Dashboard
         </Heading>
         <Box mt="6" mx="3">
           {navLinks.map((nav) => (

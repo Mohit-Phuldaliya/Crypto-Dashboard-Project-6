@@ -25,7 +25,18 @@ export default function Sidenav() {
     },
   ];
   return (
-    <Stack justify="space-between" boxShadow="lg" w="16rem" h="100vh">
+    <Stack
+      justify="space-between"
+      boxShadow={{
+        base: "none",
+        lg: "lg",
+      }}
+      w={{
+        base: "full",
+        lg: "16rem",
+      }}
+      h="100%"
+    >
       <Box>
         <Image
           mt="6"

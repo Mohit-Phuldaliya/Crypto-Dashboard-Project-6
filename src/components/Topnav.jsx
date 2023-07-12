@@ -1,4 +1,4 @@
-import React from "react";
+import { FaBars } from "react-icons/fa";
 import {
   Box,
   Stack,
@@ -16,12 +16,20 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { FaUserTie } from "react-icons/fa";
-export default function Topnav() {
+export default function Topnav({ title, onOpen }) {
   return (
-    <Box boxShadow="xl">
-      <HStack h="16" justify="space-between" p="32px" mx="auto" maxW="80rem">
+    <Box px="4" boxShadow="xl">
+      <HStack h="16" justify="space-between" mx="auto" maxW="70rem">
+        <Icon
+          as={FaBars}
+          onClick={onOpen}
+          display={{
+            lg: "none",
+            base: "block",
+          }}
+        />
         <Heading fontWeight="medium" fontSize="28px">
-          Dashboard
+          {title}
         </Heading>
         <Menu>
           <MenuButton>

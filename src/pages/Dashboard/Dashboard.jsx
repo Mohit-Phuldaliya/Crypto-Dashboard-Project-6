@@ -1,16 +1,8 @@
 import React from "react";
-import Sidenav from "../../components/Sidenav";
-import Topnav from "../../components/Topnav";
-import { Flex, Box } from "@chakra-ui/react";
+import DashboardLayout from "../../components/DashboardLayout";
+
 export default function Dashboard() {
   return (
-    <div>
-      <Flex>
-        <Sidenav />
-        <Box flexGrow={1}>
-          <Topnav />
-        </Box>
-      </Flex>
-    </div>
+    <DashboardLayout title={"Dashboard"}>Hiiiiiiiiiiiiiii</DashboardLayout>
   );
 }

@@ -10,6 +10,7 @@ import {
 import { RxDashboard } from "react-icons/rx";
 import { BsArrowDownUp } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export default function Sidenav() {
   const navLinks = [
@@ -52,41 +53,44 @@ export default function Sidenav() {
         </Heading>
         <Box mt="6" mx="3">
           {navLinks.map((nav) => (
-            <HStack
-              borderRadius="10px"
-              key={nav.text}
-              py="3"
-              px="4"
-              color="#797E82"
-              _hover={{
-                bg: "#F3F3F7",
-                color: "#171717",
-              }}
-            >
-              <Icon as={nav.icon} />
-              <Text fontWeight="medium" fontSize="14px">
-                {nav.text}
-              </Text>
-            </HStack>
+            <Link to={nav.link} key={nav.text}>
+              <HStack
+                borderRadius="10px"
+                py="3"
+                px="4"
+                color="#797E82"
+                _hover={{
+                  bg: "#F3F3F7",
+                  color: "#171717",
+                }}
+              >
+                <Icon as={nav.icon} />
+                <Text fontWeight="medium" fontSize="14px">
+                  {nav.text}
+                </Text>
+              </HStack>
+            </Link>
           ))}
         </Box>
       </Box>
       <Box mt="6" mx="3" mb="6">
-        <HStack
-          borderRadius="10px"
-          py="3"
-          px="4"
-          color="#797E82"
-          _hover={{
-            bg: "#F3F3F7",
-            color: "#171717",
-          }}
-        >
-          <Icon as={BiSupport} />
-          <Text fontWeight="medium" fontSize="14px">
-            Support
-          </Text>
-        </HStack>
+        <Link to={"/support"}>
+          <HStack
+            borderRadius="10px"
+            py="3"
+            px="4"
+            color="#797E82"
+            _hover={{
+              bg: "#F3F3F7",
+              color: "#171717",
+            }}
+          >
+            <Icon as={BiSupport} />
+            <Text fontWeight="medium" fontSize="14px">
+              Support
+            </Text>
+          </HStack>
+        </Link>
       </Box>
     </Stack>
   );

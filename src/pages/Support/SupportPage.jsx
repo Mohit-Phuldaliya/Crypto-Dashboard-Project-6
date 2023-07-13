@@ -8,7 +8,7 @@ import SupportCard from "./components/SupportCard";
 
 export default function SupportPage() {
   return (
-    <DashboardLayout>
+    <DashboardLayout title={"Support"}>
       <Stack spacing="5rem">
         <SupportCard
           icon={IoMdMail}
@@ -22,9 +22,9 @@ export default function SupportPage() {
           leftComponent={
             <InfoCard
               inverted={true}
-              tagText="Contact"
+              textTag="Chatbot"
               imgUrl="Images/gridbg.svg"
-              text="Learn more about our real estate, mortgage, and  corporate account services"
+              text="Chat with us now"
             />
           }
           title="Live Chat"

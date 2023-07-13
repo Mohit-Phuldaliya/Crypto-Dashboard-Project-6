@@ -26,19 +26,17 @@ export default function Sidenav() {
   ];
   return (
     <Stack
+      bg="white"
       justify="space-between"
       boxShadow={{
         base: "none",
         lg: "lg",
       }}
-      w={{
+      ww={{
         base: "full",
         lg: "16rem",
       }}
-      h={{
-        base: "100%",
-        lg: "100vh",
-      }}
+      h="100vh"
     >
       <Box>
         <Image
@@ -47,10 +45,10 @@ export default function Sidenav() {
           align="center"
           src="/Images/cryptologo.png"
           alt="cryptologo"
-          boxSize="50px"
+          boxSize="80px"
         />
         <Heading align="center" fontSize="20px" as="h1" pt="1rem">
-          Mohit <br></br> Crypto Dashboard
+          Mohit Crypto
         </Heading>
         <Box mt="6" mx="3">
           {navLinks.map((nav) => (

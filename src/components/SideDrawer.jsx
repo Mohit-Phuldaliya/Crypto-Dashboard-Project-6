@@ -12,7 +12,7 @@ export default function SideDrawer({ onClose, isOpen }) {
   return (
     <>
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
-        <DrawerOverlay />
+        <DrawerOverlay h="100%" w="100%" />
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerBody>

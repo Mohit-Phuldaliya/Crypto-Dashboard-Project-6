@@ -1,24 +1,18 @@
 import { FaBars } from "react-icons/fa";
 import {
   Box,
-  Stack,
   HStack,
   Icon,
-  Text,
   Heading,
-  Image,
-  Container,
-  Flex,
   Menu,
   MenuButton,
   MenuItem,
   MenuList,
-  Button,
 } from "@chakra-ui/react";
 import { FaUserTie } from "react-icons/fa";
 export default function Topnav({ title, onOpen }) {
   return (
-    <Box px="4" boxShadow="xl">
+    <Box px="4" bg="white">
       <HStack h="16" justify="space-between" mx="auto" maxW="70rem">
         <Icon
           as={FaBars}

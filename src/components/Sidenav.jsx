@@ -10,9 +10,15 @@ import {
 import { RxDashboard } from "react-icons/rx";
 import { BsArrowDownUp } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Sidenav() {
+  const location = useLocation();
+
+  const activeLink = (link) => {
+    return location.pathname === link;
+  };
+
   const navLinks = [
     {
       icon: RxDashboard,
@@ -58,7 +64,8 @@ export default function Sidenav() {
                 borderRadius="10px"
                 py="3"
                 px="4"
-                color="#797E82"
+                bg={activeLink(nav.link) ? "#F3F3F7" : "transparent"}
+                color={activeLink(nav.link) ? "#171717" : "#797E82"}
                 _hover={{
                   bg: "#F3F3F7",
                   color: "#171717",
@@ -79,11 +86,12 @@ export default function Sidenav() {
             borderRadius="10px"
             py="3"
             px="4"
-            color="#797E82"
             _hover={{
               bg: "#F3F3F7",
               color: "#171717",
             }}
+            bg={activeLink("/support") ? "#F3F3F7" : "transparent"}
+            color={activeLink("/support") ? "#171717" : "#797E82"}
           >
             <Icon as={BiSupport} />
             <Text fontWeight="medium" fontSize="14px">
